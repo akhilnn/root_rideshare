@@ -80,7 +80,7 @@ class Route(models.Model):
     # units since they snapshot a day, unless there's some
     # different way to use em
     departureTime = models.TimeField(auto_now=False, auto_now_add=False)
-    imgURL = models.CharField(max_length=1000, default=f"https://maps.googleapis.com/maps/api/staticmap?size=300x200&key={api_key}&markers=San Francisco")
+    imgURL = models.CharField(max_length=1000, default="")
 
     class Meta:
         ordering = ['departureTime']
